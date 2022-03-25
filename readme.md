@@ -8,7 +8,7 @@
     - [III.II.Rotacionar componente](#III.II.Rotacionar-componente)
     - [III.III.Duplicar Componente](#III.III.Duplicar-Componente)
     - [III.IV.Mover Componentes ](#III.IV.Mover-Componentes)
-- [IV.DIAGRAMAS ESQUEMÁTICOS](#IV.DIAGRAMAS-ESQUEMÁTICOS)
+- [IV.DIAGRAMAS ESQUEMÁTICOS](##IV.DIAGRAMAS-ESQUEMÁTICOS)
     - [IV.I.Projeto Astável 555](#IV.I.Projeto-Astável-555)
     - [IV.II.Inserir Alimentação ao circuito e o GND](#IV.II.Inserir-Alimentação-ao-circuito-e-o-GND)
     - [IV.III.Inserir linha (wire)](#IV.III.Inserir-linha-(wire))
@@ -51,7 +51,7 @@
 ### III.I.Adicionar Componente 
 - Na tela de elaboração da pcb clicar em "A"(add)
     - Será aberto uma nova janela, onde é possivel selecionar o componente
-<><br>[↑](#SUMÁRIO)
+<br>[↑](#SUMÁRIO)
 
 ### III.II.Rotacionar componente
 - Com o Componente selecionado clicar em "R"(rotate)
