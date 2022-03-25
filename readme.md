@@ -29,13 +29,13 @@
 - Extensão dos arquivos esquemáticos são ".sch"
 - Extensão do layout ".kicad_pcb"
 - Possui simulador (não tão eficiente)
-<br>[⬆︎](#SUMÁRIO)
+<br>[↑](#SUMÁRIO)
 
 ## II. DOWNLOAD DO SOFTWARE
 - Site:
     - https://www.kicad.org/
     - Link recomendado: CERN
-<br>[⬆︎](#SUMÁRIO)
+<br>[↑](#SUMÁRIO)
 
 ## III. CRIANDO UM NOVO PROJETO
 - Caminho 
@@ -46,25 +46,25 @@
 - Configurações da Página 
     - Arquivos > Configurações da Página ...
     - Será aberto uma janela para inclusão de dados que irão na legenda no canto inferior da página 
-<br>[⬆︎](#SUMÁRIO)
+<br>[↑](#SUMÁRIO)
 
 ### III.I. Adicionar Componente 
 - Na tela de elaboração da pcb clicar em "A"(add)
     - Será aberto uma nova janela, onde é possivel selecionar o componente
-<><br>[⬆︎](#SUMÁRIO)
+<><br>[↑](#SUMÁRIO)
 
 ### III.II. Rotacionar componente
 - Com o Componente selecionado clicar em "R"(rotate)
-<br>[⬆︎](#SUMÁRIO)
+<br>[↑](#SUMÁRIO)
 
 ### III.III. Duplicar Componente 
 - Com o cursor sobre o componente clicar "CTRL"+"C" e depois "CTRL"+"V" e posicionar o componete
-<br>[⬆︎](#SUMÁRIO)
+<br>[↑](#SUMÁRIO)
 
 ### III.IV. Mover Componentes  
 - É possivel mover o componente com os direcionais do teclado, (inclusive o cursor);
 - Com o cursor sobre o componente, clicar em "M"(move), o componente estará selecionado, a partir disso, alocar o componente na região desejada, ao chegar no local clicar em "ENTER" 
-<br>[⬆︎](#SUMÁRIO)
+<br>[↑](#SUMÁRIO)
 
 ## IV. DIAGRAMAS ESQUEMÁTICOS
 
@@ -91,30 +91,30 @@
 - Inserir os valores dos componentes bem como os nome
 - Projeto finalizado <br>
 ![Esquema Finalizado](/img/002.png)
-<br>[⬆︎](#SUMÁRIO)
+<br>[↑](#SUMÁRIO)
 
 ### IV.II. Inserir Alimentação ao circuito e o GND
 - A inserão é feita com a tecla "P" do teclado, seguind a isso verificando a tensão desejada 
-<br>[⬆︎](#SUMÁRIO)
+<br>[↑](#SUMÁRIO)
 
 ### IV.III. Inserir linha (wire)
 - Pode ser efetuado com a tecla "W"
 - Para fazer as quebras em 90° utilizar a tecla "Enter"
-<br>[⬆︎](#SUMÁRIO)
+<br>[↑](#SUMÁRIO)
 
 ### IV.IV. Mover Componente sem perder a linha 
 - Utilizar a tecla "G"
-<br>[⬆︎](#SUMÁRIO)
+<br>[↑](#SUMÁRIO)
 
 ### IV.V. Rotações do compotente sobre eixos X e Y
 - Utilizar tecla "X" para o eixo X e a tecla "Y" para o eixo Y com o cursor sobre o componente
-<br>[⬆︎](#SUMÁRIO)
+<br>[↑](#SUMÁRIO)
 
 ### IV.VI. Alterar o Nome e valores dos componentes 
 - EM um componente existem dois textos, o texto acima refere-se ao nome e o texto subsequente refere-se ao valor
 - Clicando sobre cada um deles com um duplo clique é possivel alterar o nome e o valor 
 - A segunda opção para alterar o valor de um componente é com o cursor sobre ele e clicar em "V" 
-<br>[⬆︎](#SUMÁRIO)
+<br>[↑](#SUMÁRIO)
 
 ### IV.VII. Anotate do Diagrama Esquemático
 - Dar número aos componentes 
@@ -122,7 +122,7 @@
 - O processo é feito no botão abaixo <br> 
 ![Anotate](/img/001.png)
 - Cada inserção de um componente feito após um anotate é necessário um novo anotate
-<br>[⬆︎](#SUMÁRIO)
+<br>[↑](#SUMÁRIO)
 
 
 
@@ -133,4 +133,4 @@
 - Optar por trabalhar com medidas em polegadas 
 - Help > List HotKeys contem a lista completa de atalhos do KiCad
 - É possivel mover o nome do componente assim como é feito com o componente em sí, bastando para isso colocar o cursor sobre o nome e apertar m, efetuando o mesmo processo que é feito com o componente como um todo 
-<br>[⬆︎](#SUMÁRIO)
+<br>[↑](#SUMÁRIO)
