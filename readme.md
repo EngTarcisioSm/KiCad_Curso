@@ -1,7 +1,7 @@
 # KICAD
 
 ## SUMÁRIO
-- [I.CARACTERISTICAS DO SOFTWARE](#I.CARACTERISTICAS-DO-SOFTWARE)
+- [CARACTERISTICAS DO SOFTWARE](#CARACTERISTICAS-DO-SOFTWARE)
 - [II.DOWNLOAD DO SOFTWARE](#II.DOWNLOAD-DO-SOFTWARE)
 - [III.CRIANDO UM NOVO PROJETO](#III.CRIANDO-UM-NOVO-PROJETO)
     - [III.I.Adicionar Componente ](#III.I.Adicionar-Componente)
@@ -19,7 +19,7 @@
 
 - [OBSERVAÇÕES](#OBSERVAÇÕES)
 
-## I.CARACTERISTICAS DO SOFTWARE
+## CARACTERISTICAS DO SOFTWARE
 - Multiplataforma 
     - Windows 
     - Linux
@@ -66,7 +66,7 @@
 - Com o cursor sobre o componente, clicar em "M"(move), o componente estará selecionado, a partir disso, alocar o componente na região desejada, ao chegar no local clicar em "ENTER" 
 <br>[↑](#SUMÁRIO)
 
-## IV.DIAGRAMAS ESQUEMATICOS
+## IV.DIAGRAMAS ESQUEMÁTICOS
 
 ### IV.I.Projeto Astável 555
 - Será descrito um passo a passo do desenvolvimento de um projeto simples de um circuito 555 astável;
