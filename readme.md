@@ -8,7 +8,7 @@
     - [III.II.Rotacionar componente](#III.II.Rotacionar-componente)
     - [III.III.Duplicar Componente](#III.III.Duplicar-Componente)
     - [III.IV.Mover Componentes ](#III.IV.Mover-Componentes)
-- [IV.DIAGRAMAS ESQUEMÁTICOS](##IV.DIAGRAMAS-ESQUEMÁTICOS)
+- [IV.DIAGRAMAS ESQUEMATICOS](#IV.DIAGRAMAS-ESQUEMATICOS)
     - [IV.I.Projeto Astável 555](#IV.I.Projeto-Astável-555)
     - [IV.II.Inserir Alimentação ao circuito e o GND](#IV.II.Inserir-Alimentação-ao-circuito-e-o-GND)
     - [IV.III.Inserir linha (wire)](#IV.III.Inserir-linha-(wire))
@@ -66,7 +66,7 @@
 - Com o cursor sobre o componente, clicar em "M"(move), o componente estará selecionado, a partir disso, alocar o componente na região desejada, ao chegar no local clicar em "ENTER" 
 <br>[↑](#SUMÁRIO)
 
-## IV.DIAGRAMAS ESQUEMÁTICOS
+## IV.DIAGRAMAS ESQUEMATICOS
 
 ### IV.I.Projeto Astável 555
 - Será descrito um passo a passo do desenvolvimento de um projeto simples de um circuito 555 astável;
