@@ -11,7 +11,7 @@
 - [DIAGRAMAS ESQUEMATICOS](#DIAGRAMAS-ESQUEMATICOS)
     - [Projeto Astável 555](#Projeto-Astável-555)
     - [Inserir Alimentação ao circuito e o GND](#Inserir-Alimentação-ao-circuito-e-o-GND)
-    - [Inserir linha "wire"](#Inserir-linha-"wire")
+    - [Inserir wire](#Inserir-wire)
     - [Mover Componente sem perder a linha](#Mover-Componente-sem-perder-a-linha)
     - [Rotações do compotente sobre eixos X e Y](#Rotações-do-compotente-sobre-eixos-X-e-Y)
     - [Alterar o Nome e valores dos componentes](#Alterar-o-Nome-e-valores-dos-componentes)
@@ -97,7 +97,7 @@
 - A inserão é feita com a tecla "P" do teclado, seguind a isso verificando a tensão desejada 
 <br>[↑](#SUMÁRIO)
 
-### Inserir linha "wire"
+### Inserir wire
 - Pode ser efetuado com a tecla "W"
 - Para fazer as quebras em 90° utilizar a tecla "Enter"
 <br>[↑](#SUMÁRIO)
