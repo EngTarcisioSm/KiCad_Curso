@@ -16,6 +16,8 @@
     - [Rotações do compotente sobre eixos X e Y](#Rotações-do-compotente-sobre-eixos-X-e-Y)
     - [Alterar o Nome e valores dos componentes](#Alterar-o-Nome-e-valores-dos-componentes)
     - [Anotate do Diagrama Esquemático](#Anotate-do-Diagrama-Esquemático)
+    - [Achar Componente mais rápido](#Achar-Componente-mais-rápido)
+    - [Organização Profissional de esquemáticos](#organização-profissional-de-esquemáticos)
 
 - [OBSERVAÇÕES](#OBSERVAÇÕES)
 
@@ -125,6 +127,43 @@
 <br>[↑](#SUMÁRIO)
 
 
+### Achar Componente mais rápido
+- Criar novo Projeto para a aula
+    - Configurar o Descritivo do projeto 
+
+- Com o KiCad aberto, ao clicar em "A", será aberto uma nova janela com todos os componentes disponiveis para o KiCad
+![Biblioteca de Componentes](/img/003.png)
+- No espaço filtro digitando apenas uma letra é possivel encontrar de forma rápida alguns compenetes 
+    - "r" resistor
+    - "c" capacitor
+    - "l" indutor
+    - "c_p" capacitor polarizado
+    - "crys cristal
+<br>[↑](#SUMÁRIO)
+
+
+### Organização Profissional de esquemáticos
+- Em eletronica analógica pura, existe uma metodologia um pouco diferente de ligação em relação a circuitos da eletronica digital ou circuitos microcontrolados ou microprocessados
+- Exemplo Quarto_Organização_Analogico
+    - Amplificador com duplo car diferencial (Circuito amplificador de audio)
+    - Não é comum trabalhar com labels(nets com nomes que definem conexão de um ponto a outro do esquemático) em eletronica analógica  
+    - É interessante posicionar os componentes mais proximos um do outro quanto possivel 
+    - Labels de alimentação e GND são permitidas
+    - Procure deixar nivelado as alimentações e os GND
+    - Buscar sempre a simetria nos desenhos dos componentes  
+
+- Exemplo Quinto_Organização_Microprocessado
+    - Utilizar labels, para cria-las pressionar a tecla "L"
+        - Por mais que fisicamente no desenho não exista a conexão o programa entende que existe sim aquela conexão fisica 
+    - É interessante separar trechos do circuito com linhas tracejadas que são feitas com o a tecla "I" ou no botão descrito abaixo
+![Botão de Linha tracejada](/img/004.png)
+    - Observando o seguinte aspecto conforme exemplo abaixo:<br>
+![Tracejado em trecho do circuito](/img/005.png)
+    - As labels podem ser colocadas sobre as wires conforme acima 
+<br>[↑](#SUMÁRIO)
+
+
+
 
 
 
@@ -133,4 +172,10 @@
 - Optar por trabalhar com medidas em polegadas 
 - Help > List HotKeys contem a lista completa de atalhos do KiCad
 - É possivel mover o nome do componente assim como é feito com o componente em sí, bastando para isso colocar o cursor sobre o nome e apertar m, efetuando o mesmo processo que é feito com o componente como um todo 
+- Segurando "CTRL" e apertando as fechas direita ou esquerda se tem o movimento horizontal no desenho
+- Segurando "SHIFT" e apertando para baixo ou para cima se tem o movimento vertical da folha de desenho
 <br>[↑](#SUMÁRIO)
+
+
+
+
