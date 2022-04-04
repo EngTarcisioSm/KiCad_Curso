@@ -18,6 +18,9 @@
     - [Anotate do Diagrama Esquemático](#Anotate-do-Diagrama-Esquemático)
     - [Achar Componente mais rápido](#Achar-Componente-mais-rápido)
     - [Organização Profissional de esquemáticos](#organização-profissional-de-esquemáticos)
+    - [Método para simular circuitos](#método-para-simular-circuitos)
+    - [Criando novos componentes e bibliotecas](#criando-novos-componentes-e-bibliotecas)
+
 
 - [OBSERVAÇÕES](#OBSERVAÇÕES)
 
@@ -161,6 +164,64 @@
 ![Tracejado em trecho do circuito](/img/005.png)
     - As labels podem ser colocadas sobre as wires conforme acima 
 <br>[↑](#SUMÁRIO)
+
+
+### Método para simular circuitos 
+- A simulação fornecida pelo KiCad é muito simples e bem superficial, não sendo a melhor forma de para análise;
+- O teste do simulador será feito atraves do projeto  "Sexto_Simul_Test";
+    - Circuito resistivo<br> 
+    ![Circuito Resistivo](/img/006.png)
+- A ferramenta de simulação fica em Tools > Simulator ou em Inspecione > Simulador
+- O KiCad possui uma ferramenta de port do circuito criado para o LT Spice que é uma ferramenta de simulação apropriada. Para fazer a conversão ir em Arquivo > Exportar > Exporte a Netlist
+    - Apagar a mensagem descrita no campo "Comando externo do simulador" e clicar em "Exporte a Netlist"
+    - Será salvo um arquivo com extensão .cir
+<br>[↑](#SUMÁRIO)
+
+### Criando novos componentes e bibliotecas
+- É possivel criar e editar componentes já existentes 
+- Para iniciar a criação de um novo componente na janela principal do KiCad clicar em:
+    - Editor de símbolos<br>
+    ![Editor de Símbolo](/img/007.png)
+    - Será aberto uma nova janela 
+- É possivel ao criar um novo componente, salva-lo em uma biblioteca já existente ou criar uma nova biblioteca para armazenar o componente 
+
+- Para criar uma nova biblioteca, clicar em Arquivo > Nova Biblioteca, em seguida será solicitado um nome para a bilbioteca 
+
+- Para criar um novo símbolo clicar em "Criar Novo Símbolo" ou digitar a tecla "N"<br>
+![Simbolo](/img/008.png)
+    - Para criar um novo símbolo é necessário antes criar uma nova biblioteca, aparentemente não se pode criar simbolos em bibliotecas já existentes do kicad;
+    - Deve-se selecionar a biblioteca a qual o componente será alocado e depois clicar em "Criar Novo Símbolo";<br>
+    ![New Window](/img/009.png)
+    - Em "Nome do símbolo" inserir o nome do componente;
+    - Designador de referência padrão pode ser deixado como "U" bem como "A quantidade das unidades por pacote" como "1"
+    - Feito isso clicar em "OK" e será apresentado o nome do componente na tela bem como sua letra de referencia (tudo junto);<br>
+    ![Paso1](/img/010.png)
+    - movido 
+    ![Paso2](/img/011.png)
+- Feito os passos acima é necessário adicionar os pinos (TODOS DE PREFERENCIA, UM POR UM, DEPOIS É POSSIVEL ORGANIZA-LOS)
+    - A adição pode ser feita de duas formas, clicando no icone de adicionar pinos ou clicando em "P"<br>
+    ![Paso3](/img/012.png)
+    - Será aberto a seguinte janela para configuração do pino;<br>
+    ![Paso4](/img/013.png)
+    - É importante configurar os pinos na nova janela:
+        - "Nome do pino"
+        - "Numero do Pino"
+        - "Tipo elétrico" colocar bidirecional, (APENAS NÃO COLOCA-LO COMO BIDIRECIONAL QUANDO SOUBER EXATAMENTE DO QUE SE TRATA O PINO)
+- As bolinhas em cada pino representa a conexão externa do circuito integrado denvendo elas ficarem para foram 
+- Criado todos os pinos se faz necessário a sua organização, recomenda-se conforme o descrito no datasheet do componente:
+- Descritivo do componente<br>
+![Descritivo do Componente](/img/014.png)
+- Após a organização criar o retangulo para efetuar o contorno com a ferramenta "Adicionar retangulo<br>
+![Botão Retangulo](/img/015.png)
+- Apos isso clicar com o botão direito sobre a linha do retangulo, ir em propriedade e selecionar "Preencha com a cor de fundo do corpo"
+- Ficando da seguinte forma:<br>
+![Componente Desenhado](/img/016.png)
+- Feito isso basta salvar e o componente ja estará pronto para uso 
+<br>[↑](#SUMÁRIO)
+
+
+
+
 
 
 

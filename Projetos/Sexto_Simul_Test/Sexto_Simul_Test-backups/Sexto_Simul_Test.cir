@@ -1,0 +1,4 @@
+.title KiCad schematic
+R2 /Vout GND 1k
+R1 /Vin /Vout 1k
+.end
