@@ -22,6 +22,8 @@
     - [Criando novos componentes e bibliotecas](#criando-novos-componentes-e-bibliotecas)
     - [Exportando seus esquemáticos profissionais](#Exportando-seus-esquemáticos-profissionais)
 - [PLACA DE CIRCUITO IMPRESSO](#PLACA-DE-CIRCUITO-IMPRESSO)
+    - [Criando o primeiro lay-out de PCB em face simples](#Criando-o-primeiro-lay-out-de-PCB-em-face-simples)
+
 
 
 - [OBSERVAÇÕES](#OBSERVAÇÕES)
@@ -238,6 +240,7 @@
 - Com circuitos smd;
 - Criação de footprint específicas para componentes, caso não exista na biblioteca padrão;
 - Geração dos arquivos gerber;
+<br>[↑](#SUMÁRIO)
 
 ### Criando o primeiro lay-out de PCB em face simples 
 - Projeto de um regulador de 5V
@@ -274,7 +277,7 @@
 ![Medição](/img/029.png)<br> 
 - É possivel visualizar através de uma animação 3d o resultado clocando em View > 3D Viewer<br>
 ![Visualizacao](/img/030.png)<br> 
-
+<br>[↑](#SUMÁRIO)
 
 
 
