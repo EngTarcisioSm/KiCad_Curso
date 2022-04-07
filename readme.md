@@ -20,6 +20,8 @@
     - [Organização Profissional de esquemáticos](#organização-profissional-de-esquemáticos)
     - [Método para simular circuitos](#método-para-simular-circuitos)
     - [Criando novos componentes e bibliotecas](#criando-novos-componentes-e-bibliotecas)
+    - [Exportando seus esquemáticos profissionais](#Exportando-seus-esquemáticos-profissionais)
+- [PLACA DE CIRCUITO IMPRESSO](#PLACA-DE-CIRCUITO-IMPRESSO)
 
 
 - [OBSERVAÇÕES](#OBSERVAÇÕES)
@@ -218,6 +220,64 @@
 ![Componente Desenhado](/img/016.png)
 - Feito isso basta salvar e o componente ja estará pronto para uso 
 <br>[↑](#SUMÁRIO)
+
+### Exportando seus esquemáticos profissionais
+- Gerar o pdf do esquemático
+- Para gerar o pdf será utilizado o projeto no qual foi desenvolvido o amplificador 
+- Para gerar o esquemático clicar em "Plot"<br>
+![Botão Plot](/img/017.png)
+- Na janela aberta é possivel escolher o diretorio em que será salvo, o formato de saida, o tamanho da folha e se colorido e preto e branco 
+![Configuração de pdf](/img/018.png)
+    - Em geral pdf de esquemáticos são colocados em preto e branco
+- Observação: Caso deseje-se gerar mais de um arquivo (preto e branco e colorido) acarretará em um erro pois não é possivel configurar o nome do arquivo de saída. Para não ocorrer o arquivo gerado deve ser mudado de diretorio 
+<br>[↑](#SUMÁRIO)
+
+## PLACA DE CIRCUITO IMPRESSO
+- Projetos em face simples;
+- Dupla face;
+- Com circuitos smd;
+- Criação de footprint específicas para componentes, caso não exista na biblioteca padrão;
+- Geração dos arquivos gerber;
+
+### Criando o primeiro lay-out de PCB em face simples 
+- Projeto de um regulador de 5V
+    - Os capacitores de entrada são para filtragem do sinal de entrada em especial o eletrolítico
+    - O Resistor na saída é limitante de corrente para o led indicador de funcionamento<br>
+    ![Esquema Elétrico](/img/019.png)
+    - Dar o anotate no circuito para numerar os componentes 
+- Após o esquema elétrico montado deve-se verificar algum erro de conexão eletrica indo em Inspecione > Verificador das Regras elétricas
+    - Será apresentado alguns erros nesse caso entretanto os erros não devem ser levados em consideração
+- Após a analise em cima  efetuar a atribuição dos footprints em "Executa a ferramenta de atribuição de footprint"<br>
+![Atribuição de footprint](/img/020.png)
+- Será aberto uma nova janela para fazer associação de footprints a cada componente, nesse momento é necessário de ter o conhecimento de cada componente utilizado  
+    - É necessário escolher a biblioteca de footprint a esquerda e as medições do footprints filtrados a direita, ao escolher dar um duplo clique 
+    - Finalizando o processo a janela ficaria como abaixo;<br>
+    ![Atribuição de footprint](/img/021.png)
+    - Ao finalizar clicar em "Aplique, Salve o Esquema & Continue"
+- Ao que parece a partir da versão 6 do KiCad a geração de netList não é necessária, após o passo anterior, clicar em "Abra a PCI no editor"<br>
+![Editar PCI](/img/022.png)
+- Na nova Janela aberta, clicar em "Update PCB with changes made to schematic"<br>
+![Editar PCI 2](/img/023.png)
+    - Todos os componentes serão colocados na folha, deve-se arrastalos para o meio e deve-se organiza-los
+    - Os mesmos comandos de organização no editor de esquema também se aplicam aqui (movimento, rotação e etcm)<br>
+    ![Organizado](/img/024.png)
+- Desenhar as layers
+    - Como se trata de uma placa de face simples selecionar na aba Aparence layers > B.Cu<br>
+    ![Organizado layer](/img/025.png)
+    - Seguido a isso clicar em "Route Track" e a partir disso desenhar as layers acompanhando os riscos brancos do desenho<br>
+    ![Route Track](/img/026.png)<br>
+    ![Route Track 2](/img/027.png)
+- Desenhar o contorno da placa 
+    - Selecionar "Edge.Cuts na mesma Guia Aparence layers
+- Para verificar o tamanho da placa selecionar a unidade de medida a esquerda e em seguida utilizar o botão de medição a direita<br>
+![Medição](/img/028.png)<br> 
+![Medição](/img/029.png)<br> 
+- É possivel visualizar através de uma animação 3d o resultado clocando em View > 3D Viewer<br>
+![Visualizacao](/img/030.png)<br> 
+
+
+
+
 
 
 
