@@ -279,13 +279,101 @@
 ![Visualizacao](/img/030.png)<br> 
 <br>[↑](#SUMÁRIO)
 
+### Criando o primeiro lay-out de PCB em dupla face
+- Placas em dupla face de esquemas intermediários a avançados minimiza indutancias e capacitancias parasitas (trilhas longas ou paralelas);
+- Para efeturar trilhas superiores ou seja na outra face, utilizar "F.Cu", sendo um tracejado vermelho
+- Para adicionar os furos de passagem de trilha de uma face para outra, ao fazer a trilha basta pressionar a tecla "V"
+- Fazer o contorno de corte da placa com Edge.Cuts
+- Após efetuar todas as trilhas verificar se existe algum problema encontrado, clicando em Inspecione > Verificador das Regras do Desenho
+- Para fazer escritas na placa escolha F.SilkScreen
+
+- Para adicionar os furos de fixação clicar no icone "Adicionar um Footprint" ou clicar em A;
+- Escolher o furo de prefernecia, ( no caso ado autor MountingHole 3.2,,_M3)
+
+### Criando lay-out em SMD
+- Para um circuito compacto, é necessário desenvolver a placa de circuito impreso com componentes SMD;
+- Nono Projeto
+- Para trabalhar em smd o primeiro passo é desenvolver o esquemático normalmente
+- Após todo o desenvolvimento normalmente efetuado, basta clicar na ferramenta "Executar a ferramenta de atribuição de footprint (versão 6.0 kicad)" e escolher os componentes smd que serão utilizados
+- Associar todos os footprints dos componentes que podem ser SMD
+    ![Marcação de Footprint](/img/031.png)<br> 
+    - O kicad não faz associação automática de footprints a componentes, para isso deve-se acessar o datasheet do componente e verificar as especificações de tamanho e tipo de soquete do componente e efetuar manualmente esse processo
+- Após o processo acima, salvar as associações retornar para a folha de projeto e clicar em "Abra a PCI no editor da placa (versão Kicad 6.0)"
+- Na nova janela clicar em "Update PCB whith changes made to schematic (F8)", os componentes irão para folha;
+- Organizar os componentes
+- Observação, o componente TL084 ja possui internamente os 4 circuitos necessários, logo no esquema elétrico para sua utilização é necessário nomea-lo como U1 em todos e clicando no componente será aberto uma nova janela onde é possivel escolher os canais para os demais circuitos internos do componente (A,B,C,D)
+![Observação 1](/img/032.png)<br> 
+![Observação 2](/img/033.png)<br> 
+- Diferentes das placas pth se começa o desenho das trilhas pelo front cupper (F.Cu)
+    - Atalho para esse desenho a tecla "X"
+
+- Após o desenho de todas as trilhas clicar no botão "Mostrar a janela do verificador das regras do desenho"
+![Verificação](/img/034.png)<br> 
+    - É informado na janela erros e inclusive conexões faltantes 
+
+- Para Economizar material corrosivo inclusive inserir fornecer uma proteção a placa do ponto de vista elétrico é possivel nos pontos que não há trilha serem inseridos uma conexão com o gnd.
+- Para adicionar deve-se clicar no botão "Add a filled zone ou Ctrl + Shift + Z"
+![botao](/img/035.png)<br> 
+- Será aberto uma janela na qual deve-se selecionar F.Cu, B.Cu e GND. Será solicitado para que se 
+selecione a area. Após isso deve-se clicar dentro da area com o botão direito, ir em "Zonas" e clicar em preencher todas as zonas
+
+### Desenhando footprints personalizados
+- Em alguns casos quando o componente não possui footprint é necessário cria-lo;
+- O Kicad possui uma ferramenta simples e eficaz para desenhos de footprints;
+- Criação exemplo de um componente pth e um smd 
+    - Componente PTMM
+        - O componente a ser utilizado será o AN7125 (pth)
+
+    - Primeiro passo para a criação é abrir o editor de footprints localizado como um icone na pagina principal do kicad
+    ![icone](/img/036.png)<br> 
+    - Na janela aberta clicar no icone "Create a new, empty footprint (ctrl + N)
+    ![icone](/img/037.png)<br>
+    - Na nova janela aberta deve-se dar um nome para o componente e na versão do KiCad nova também é solicitado o tipo de componente
+    - É possivel configurar a passada do kiCad para ser algo semelhante ou proximo da passada dos pads do componente facilitando assim o desenho do mesmo. Deve-se clicar com o botão direito ta tela do Kicad na area de desenhor e ir em "Grid" e em seguida efetuar a seleção do novo step
+    ![icone](/img/038.png)<br>
+    - Para adicionar os furos que o componente possui (PTH) que transpassam a placa, clicar no botão  "Add Pad"
+    ![icone](/img/039.png)<br>
+    - Para aumentar a espeçura do buraco (recomenda-se sempre que o buraco seja um pouco maior que o conector para que a solda possa entrar ), para configurar isso, clica-se duas vezes sobre o pad e se altera Pad Size X para determinar o tamanho da região de conexão com as trilhas e em Hole size x para alterar o tamanho do buraco 
+
+    - O Buraco possui uma camada redonda, entretanto convenciona-se que o pino 1 do componente a sua regiao em torno do buraco não seja redonda mais sim quadrado 
+
+    - É importante desenhar o contorno do componente com o tipo de linha "F.Silkscreen"
+
+    - Convenciona-se no entorno do primeiro pino desenhar um quadrado, ficando ao final da seguinte forma
+    ![icone](/img/040.png)<br>
+
+    - No caso do componente desenhado AN7125 é possivel também desenhar uma região a qual o dissipador estaria posicionado. Ficando ao final conforme abaixo
+    ![icone](/img/041.png)<br>
+
+    - Para efetuar desenhos na parte de baixo da placa utiliza-se a layer "B.Silkscreen"
+
+    - Caso o componente possuia uma area para seus pads e uma area maior para o componente em só é possivel defini-la com a layer "F.Courtyard"
+
+    - Para salvar no kicad 6 não é possivel salvar nas bibliotecas ja existentes é necessário criar uma biblioteca nova, clicando em File > New Libraries, em seguida criar uma pasta na qual os footprints serão salvos. Feito isso clicar em SAve As e selecionar a biblioteca criada  
+
+- O Kicad possui uma ferramenta que auxilia na criação de footprints de forma muito mais fácil
+- Terá como exemplo a criação de um footprint para o microcontrolador ATMega328P com o encapsulamento TQFP
+    - Após criar o projeto do footprint clicar em "Create a new footprint using the Footprint Wizard"
+    - Será aberto uma nova janela solicitando como base alguns footprints base, para o exemplo será selecionado o tipo "QFP". Será aberto um footprint base de 100pinos e uma tabela ao lado para configurar o footprint 
+    ![icone](/img/042.png)<br>
+
+    - Configurando basta clicar em "Export footprint to editor"
+
+### Gerando o arquivo Gerber para fabricação
+- Arquivo necessário para envio para empresas que fabricam placas;
+- Antes de gerar o arquivo é interessante verificar se existe algum erro na placa atraves da ferramenta presente no KiCad chamada "Show the design rules checker window"
+![icone](/img/043.png)<br>
+- Será aberto uma janela "DRC Control", devendo-se clicar em "Run DRC" para verificar possiveis erros antes de gerar o arquivo de produção
+- Para se gerar o arquivo gerber deve-se clicar em plot 
+![icone](/img/044.png)<br>
+- Será aberto uma nova janela na qual é solicitado o caminho em que deverá ser salvo o arquivo. Escolhendo a pasta, deve-se apenas clicar em "Plot"
+- Após o passo acima clicar em "Generate Drill Files...", será aberto uma nova janela e deve-se clicar em "Generate Drill File"
+- Para verificar se os arquivos foram gerados corretamente, na tela principal do KiCad existe um visualizador de arquivos gerber que pode ser utilizado para visualizar o resultado 
+![window](/img/045.png)<br>
+    - Aberto A nova janela basta selecionar os arquivos e visualizar se esta tudo correto 
 
 
-
-
-
-
-
+### Projeto Final: Placa controladora (PIC)
 
 
 
@@ -298,6 +386,9 @@
 - É possivel mover o nome do componente assim como é feito com o componente em sí, bastando para isso colocar o cursor sobre o nome e apertar m, efetuando o mesmo processo que é feito com o componente como um todo 
 - Segurando "CTRL" e apertando as fechas direita ou esquerda se tem o movimento horizontal no desenho
 - Segurando "SHIFT" e apertando para baixo ou para cima se tem o movimento vertical da folha de desenho
+- Não é recomendado usar processos de roteamento de trilhas automáticas, o KiCad não possui nativamente essa ferramenta, entretanto não é recomendado seu uso 
+- A borda que define as margens da placa é a "Edge.Cuts"
+- Alguns componentes possuem mais de um circuito integrado interno como é o caso do nono projeto, para a utilização de todos ele é necessário copia-lo e cola-lo a quantidade de itens a ser utilizado e em seu nome U?X a interrogação, manter o mesmo numero e só alterar o X correspondente a letra. Para alterar a letra basta dar dois cliques no componente e na nova janela ir em General Units e escolher (A, B, C, ...)
 <br>[↑](#SUMÁRIO)
 
 
